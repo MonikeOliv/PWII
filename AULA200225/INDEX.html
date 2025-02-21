@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Revisão Javascript</h1>
+    <p>A arquitetura de software e os servidores desempenham papéis cruciais na criação de sistemas e aplicações. Vou te explicar de forma geral como elas se comunicam, abordando os conceitos básicos e os componentes envolvidos.
+
+        Arquitetura de Software
+        A arquitetura de software refere-se ao design e organização de um sistema de software, incluindo a forma como os diferentes componentes e módulos se conectam e interagem. Ela define a estrutura do sistema, a divisão de responsabilidades e a comunicação entre os componentes. Existem diferentes tipos de arquitetura, como:
+        
+        Monolítica:
+        
+        Tudo está integrado em um único bloco de código.
+        A comunicação entre os módulos ocorre diretamente dentro do mesmo processo de execução.
+        Pode ser mais simples de implementar inicialmente, mas pode se tornar difícil de manter conforme o sistema cresce.
+        Arquitetura em Camadas (Layered Architecture):
+        
+        Organiza o sistema em camadas, como camada de apresentação, camada de lógica de negócios e camada de dados.
+        Cada camada tem uma responsabilidade específica e se comunica com a camada abaixo dela.
+        Promove a separação de preocupações e facilita a manutenção.
+        Microserviços:
+        
+        Divide o sistema em serviços pequenos e independentes, cada um com sua própria responsabilidade e base de dados.
+        Cada serviço se comunica com outros serviços por meio de APIs ou mensagens.
+        Mais flexível e escalável, mas pode ser mais complexo de gerenciar.
+        Arquitetura Orientada a Eventos (Event-driven Architecture):
+        
+        A comunicação entre os componentes é feita por eventos. Um componente gera um evento que é consumido por outro componente.
+        Muito útil em sistemas distribuídos e de alta escalabilidade.
+        Servidores
+        Um servidor é um computador ou software que fornece serviços para outros sistemas ou dispositivos (chamados de clientes). Em um contexto de desenvolvimento de software, os servidores são responsáveis por hospedar aplicações, processar solicitações e responder com os dados ou serviços solicitados. Os tipos principais de servidores são:
+        
+        Servidor Web:
+        
+        Hospeda sites e aplicativos web.
+        Responde a solicitações HTTP, geralmente recebendo uma URL do cliente (como um navegador) e enviando uma resposta com a página solicitada.
+        Exemplo: Apache, Nginx, ou servidores baseados em Node.js.
+        Servidor de Banco de Dados:
+        
+        Armazena e gerencia dados, fornecendo uma interface para os clientes (aplicações) consultarem, atualizarem e manipularem os dados.
+        Exemplo: MySQL, PostgreSQL, MongoDB.
+        Servidor de Aplicação:
+        
+        Executa lógica de negócios e processa a maior parte da interação entre a interface do usuário e o banco de dados.
+        Exemplo: Tomcat, Wildfly, Node.js.
+        Como Arquitetura e Servidores se Comunicando
+        1. Cliente e Servidor
+        A comunicação entre cliente e servidor geralmente acontece por meio de protocolos de rede como HTTP/HTTPS ou WebSockets, dependendo do tipo de aplicação.
+        O cliente pode ser um navegador web, um aplicativo móvel, ou outro serviço que faz requisições a um servidor.
+        O servidor recebe as requisições, processa-as (pode consultar bancos de dados, executar lógica de negócios, etc.), e retorna uma resposta.
+        2. Arquitetura de Microserviços e Comunicação entre Serviços
+        Quando a arquitetura é baseada em microserviços, os servidores (ou instâncias de serviço) precisam se comunicar entre si.
+        A comunicação pode ocorrer por meio de APIs RESTful, mensageria (RabbitMQ, Kafka), ou até mesmo gRPC (para alta performance).
+        Cada microserviço tem sua própria base de dados e lógica de negócios, permitindo que os serviços evoluam de forma independente, mas ainda assim se comuniquem entre si conforme necessário.
+        3. Arquitetura em Camadas e Servidores
+        Em uma arquitetura em camadas, a comunicação entre camadas (ou servidores) segue um fluxo específico:
+        O servidor web pode receber a solicitação de um usuário e passá-la para o servidor de aplicação, que processa a lógica de negócios.
+        Em seguida, o servidor de aplicação consulta o servidor de banco de dados para obter ou armazenar dados.
+        Cada camada é responsável por uma parte do processo, e os servidores devem estar configurados para se comunicar corretamente.
+        4. Serviços Assíncronos e Eventos
+        Em uma arquitetura orientada a eventos, os servidores se comunicam de maneira assíncrona.
+        Um serviço pode publicar um evento em um sistema de mensageria, e outros serviços podem escutar esse evento e reagir conforme necessário. Isso é comum em sistemas distribuídos e de alta escalabilidade.
+        5. Protocolos e APIs
+        APIs (Interface de Programação de Aplicações) são o ponto central da comunicação entre servidores e componentes da arquitetura. Elas permitem que diferentes partes do sistema interajam de forma padronizada.
+        Exemplo: Um servidor web pode expor uma API REST que um cliente pode consumir para realizar operações, como cadastrar um usuário ou buscar dados.
+        Além de HTTP/HTTPS, os servidores podem usar outros protocolos como gRPC (para comunicação de baixo custo e alta performance) ou WebSockets (para comunicação bidirecional em tempo real).
+        Conclusão
+        A arquitetura de software define a estrutura e os padrões de comunicação entre os componentes do sistema, enquanto os servidores são responsáveis por hospedar e executar esses componentes. A comunicação entre eles pode ser realizada de diversas formas, como chamadas HTTP, APIs, mensageria assíncrona, etc. O uso de uma arquitetura bem definida e servidores corretamente configurados garante que o sistema seja escalável, eficiente e de fácil manutenção.</p>
+<img src="" alt="">
+    </body>
+</html>
